@@ -10,7 +10,6 @@ import com.jme3.app.Application;
 import com.jme3.app.state.AbstractAppState;
 import com.jme3.app.state.AppStateManager;
 import com.jme3.audio.AudioNode;
-import com.jme3.input.InputManager;
 import com.jme3.input.KeyInput;
 import com.jme3.input.controls.ActionListener;
 import com.jme3.input.controls.KeyTrigger;
@@ -54,8 +53,8 @@ public class MatchAppState extends AbstractAppState {
     }
 
     private void initializeTeams(final Application app) {
-        final AnimatedSprite kunioSprite = AnimatedSprite
-                .load("textures/teams/japan/kunio/kunio.animatedsprite", app.getAssetManager());
+        final AnimatedSprite kunioSprite = AnimatedSprite.load("textures/teams/japan/kunio/kunio.animatedsprite",
+                app.getAssetManager());
         final Node kunioNode = new Node();
         kunioNode.attachChild(kunioSprite);
         matchRoot.attachChild(kunioNode);

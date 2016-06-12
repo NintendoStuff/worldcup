@@ -19,16 +19,16 @@ public class AnimatedSpriteLoader extends GsonAssetLoader<AnimatedSpriteDefiniti
 
     private static boolean registered;
 
+    public AnimatedSpriteLoader() {
+        super(AnimatedSpriteDefinition.class);
+    }
+
     public static void register(final AssetManager assetManager) {
         if (registered) {
             return;
         }
         assetManager.registerLoader(AnimatedSpriteLoader.class, "animatedsprite");
         registered = true;
-    }
-
-    public AnimatedSpriteLoader() {
-        super(AnimatedSpriteDefinition.class);
     }
 
     @Override

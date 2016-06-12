@@ -34,7 +34,7 @@ public class WorldCup extends SimpleApplication {
         stateManager.attach(matchAppState);
 
         stateManager.detach(stateManager.getState(FlyCamAppState.class));
-//        stateManager.detach(stateManager.getState(DebugKeysAppState.class));
+        // stateManager.detach(stateManager.getState(DebugKeysAppState.class));
     }
 
 }

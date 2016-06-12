@@ -6,9 +6,9 @@
  */
 package com.nintendostuff.worldcup;
 
-import com.jme3.system.NativeLibraryLoader;
-
 import java.io.File;
+
+import com.jme3.system.NativeLibraryLoader;
 
 /**
  * @author Klaus Hauschild

@@ -16,14 +16,14 @@ import com.nintendostuff.worldcup.sprite.Sprite;
  */
 public class AnimatedSprite extends Sprite {
 
-    public static AnimatedSprite load(final String name, final AssetManager assetManager) {
-        AnimatedSpriteLoader.register(assetManager);
-        return assetManager.loadAsset(new AnimatedSpriteKey(name));
-    }
-
     public AnimatedSprite(final String name, final Vector2f size, final boolean transparent, final Vector3f rotation,
             final Vector3f translation, final AssetManager assetManager) {
         super(name, null, size, transparent, rotation, translation, assetManager);
+    }
+
+    public static AnimatedSprite load(final String name, final AssetManager assetManager) {
+        AnimatedSpriteLoader.register(assetManager);
+        return assetManager.loadAsset(new AnimatedSpriteKey(name));
     }
 
 }

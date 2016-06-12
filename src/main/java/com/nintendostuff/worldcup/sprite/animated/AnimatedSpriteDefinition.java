@@ -26,7 +26,7 @@ public class AnimatedSpriteDefinition extends SpriteDefinition {
         static class FrameDefinition {
 
             public String texture;
-            public long duration;
+            public long   duration;
 
         }
 

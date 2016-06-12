@@ -6,9 +6,9 @@
  */
 package com.nintendostuff.worldcup.sprite.animated;
 
-import com.jme3.texture.Texture;
-
 import java.util.List;
+
+import com.jme3.texture.Texture;
 
 /**
  * @author Klaus Hauschild
@@ -43,7 +43,7 @@ public class Animation {
     static class Frame {
 
         private Texture texture;
-        private long duration;
+        private long    duration;
 
         public Frame(final Texture texture, final long duration) {
             this.texture = texture;

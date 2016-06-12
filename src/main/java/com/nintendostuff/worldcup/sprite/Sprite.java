@@ -23,11 +23,6 @@ import com.jme3.texture.Texture;
  */
 public class Sprite extends Geometry {
 
-    public static Sprite load(final String name, final AssetManager assetManager) {
-        SpriteLoader.register(assetManager);
-        return assetManager.loadAsset(new SpriteKey(name));
-    }
-
     public Sprite(final String name, final Texture texture, Vector2f size, final boolean transparent, final Vector3f rotation,
             final Vector3f translation, final AssetManager assetManager) {
         super(name, new Quad(size.getX(), size.getY()));
@@ -50,6 +45,11 @@ public class Sprite extends Geometry {
         if (translation != null) {
             setLocalTranslation(translation);
         }
+    }
+
+    public static Sprite load(final String name, final AssetManager assetManager) {
+        SpriteLoader.register(assetManager);
+        return assetManager.loadAsset(new SpriteKey(name));
     }
 
     public void setTexture(final Texture texture) {

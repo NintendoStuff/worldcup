@@ -7,7 +7,6 @@
 package com.nintendostuff.worldcup.match;
 
 import com.jme3.math.FastMath;
-import com.jme3.math.Quaternion;
 import com.jme3.math.Vector3f;
 import com.jme3.renderer.RenderManager;
 import com.jme3.renderer.ViewPort;
@@ -16,41 +15,10 @@ import com.jme3.scene.control.AbstractControl;
 import com.nintendostuff.worldcup.sprite.animated.AnimatedSprite;
 import com.nintendostuff.worldcup.sprite.animated.AnimatedSpriteControl;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-
 /**
  * @author Klaus Hauschild
  */
 public class PlayerControl extends AbstractControl {
-
-    enum Direction {
-
-        RIGHT(0f, 1),
-
-        LEFT(180f, -1),
-
-        ;
-
-        private float angle;
-        private int rotation;
-
-        Direction(final float angle, int rotation) {
-            this.angle = angle;
-            this.rotation = rotation;
-        }
-
-        public float getAngle() {
-            return angle;
-        }
-
-        public int getRotation() {
-            return rotation;
-        }
-
-    }
 
     private Direction direction = Direction.RIGHT;
     private boolean   up;
@@ -93,7 +61,7 @@ public class PlayerControl extends AbstractControl {
         // check rotation
         final float rotation = spatial.getWorldRotation().toAngles(null)[1] * FastMath.RAD_TO_DEG;
         final float dist = FastMath.abs(direction.getAngle() - rotation);
-        if(dist > 10f) {
+        if (dist > 10f) {
             spatial.rotate(0f, direction.getRotation() * tpf * 15f, 0f);
         } else {
             spatial.lookAt(spatial.getWorldTranslation().add(0f, 0f, direction.getRotation()), Vector3f.UNIT_Y);
@@ -131,6 +99,32 @@ public class PlayerControl extends AbstractControl {
 
     @Override
     protected void controlRender(final RenderManager rm, final ViewPort vp) {
+    }
+
+    enum Direction {
+
+        RIGHT(0f, 1),
+
+        LEFT(180f, -1),
+
+        ;
+
+        private float angle;
+        private int   rotation;
+
+        Direction(final float angle, int rotation) {
+            this.angle = angle;
+            this.rotation = rotation;
+        }
+
+        public float getAngle() {
+            return angle;
+        }
+
+        public int getRotation() {
+            return rotation;
+        }
+
     }
 
 }

@@ -17,16 +17,16 @@ public class SpriteLoader extends GsonAssetLoader<SpriteDefinition, Sprite> {
 
     private static boolean registered;
 
+    public SpriteLoader() {
+        super(SpriteDefinition.class);
+    }
+
     public static void register(final AssetManager assetManager) {
         if (registered) {
             return;
         }
         assetManager.registerLoader(SpriteLoader.class, "sprite");
         registered = true;
-    }
-
-    public SpriteLoader() {
-        super(SpriteDefinition.class);
     }
 
     @Override
