@@ -6,11 +6,8 @@
  */
 package com.nintendostuff.worldcup;
 
-import com.jme3.app.DebugKeysAppState;
 import com.jme3.app.FlyCamAppState;
 import com.jme3.app.SimpleApplication;
-import com.jme3.app.StatsAppState;
-import com.jme3.math.Vector3f;
 import com.jme3.system.AppSettings;
 import com.nintendostuff.worldcup.match.MatchAppState;
 
