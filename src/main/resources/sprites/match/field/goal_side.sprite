@@ -1,0 +1,9 @@
+{
+  "name": "Goal side",
+  "texture": "sprites/match/field/goal_side.png",
+  "size": {
+    "x": 11.1,
+    "y": 20.6
+  },
+  "transparent": true
+}

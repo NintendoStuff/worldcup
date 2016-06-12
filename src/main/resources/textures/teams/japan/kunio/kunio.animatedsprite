@@ -1,0 +1,37 @@
+{
+  "name": "Kunio",
+  "size": {
+    "x": 6.3,
+    "y": 9.9
+  },
+  "transparent": true,
+  "translation": {
+    "x": -3.15,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "frames": [
+        {
+          "texture": "textures/teams/japan/kunio/idle.png"
+        }
+      ]
+    },
+    {
+      "name": "walk",
+      "frames": [
+        {
+          "texture": "textures/teams/japan/kunio/walk_0.png",
+          "duration": 100.0
+        },
+        {
+          "texture": "textures/teams/japan/kunio/walk_1.png",
+          "duration": 100.0
+        }
+      ]
+    }
+  ],
+  "initialAnimation": "idle"
+}

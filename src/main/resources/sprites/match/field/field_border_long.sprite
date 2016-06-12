@@ -1,0 +1,13 @@
+{
+  "name": "Field border (long)",
+  "texture": "sprites/match/field/field_border.png",
+  "size": {
+    "x": 4.5,
+    "y": 230.4
+  },
+  "rotation": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 90.0
+  }
+}

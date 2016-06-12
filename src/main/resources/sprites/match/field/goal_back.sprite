@@ -1,0 +1,19 @@
+{
+  "name": "Goal back",
+  "texture": "sprites/match/field/goal_back.png",
+  "size": {
+    "x": 20.6,
+    "y": 21.9
+  },
+  "rotation": {
+    "x": -90.0,
+    "y": 0.0,
+    "z": 82.0
+  },
+  "translation": {
+    "x": -10.3,
+    "y": 0.0,
+    "z": 10.95
+  },
+  "transparent": true
+}
